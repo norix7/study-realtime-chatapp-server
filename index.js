@@ -24,7 +24,7 @@ const io = new Server(server, {
   // path: "/socket.io/"
 });
 
-app.get("/", (req, res) => {
+app.get("/test", (req, res) => {
   res.send("<h1>Hello World!</h1>");
 });
 
