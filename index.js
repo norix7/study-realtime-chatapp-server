@@ -16,7 +16,7 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://study-realtime-chatapp-client.vercel.app/",
       // or with an array of origins
       // origin: ["https://my-frontend.com", "https://my-other-frontend.com", "http://localhost:3000"],
     credentials: true
@@ -45,8 +45,8 @@ io.on("connection", (socket) => {
 });
 
 
-const PORT = 5001;
+const PORT = 3000;
 
 server.listen(PORT, () => {
-  console.log(`Backend server is listening on http://localhost:${PORT}`);
+  console.log(`Listening on ${PORT}`);
 })
