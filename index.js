@@ -17,7 +17,7 @@ const { Server } = require("socket.io");
 const io = new Server(server, {
   cors: {
     // 最後にスラッシュ/を付けるとCORSエラーになるので気をつけること
-    origin: ["https://study-realtime-chatapp-client.vercel.app", "http://localhost:3000"],
+    origin: "http://localhost:3000"
     // credentials: true
   },
   // サーバー側とクライアント側の両方で、第2引数にpathを同値で設定する必要がある。
@@ -46,7 +46,7 @@ io.on("connection", (socket) => {
 });
 
 
-const PORT = 3000;
+const PORT = 3001;
 
 server.listen(PORT, () => {
   console.log(`Listening on ${PORT}`);
