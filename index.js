@@ -18,12 +18,10 @@ const io = new Server(server, {
   cors: {
     // 最後にスラッシュ/を付けるとCORSエラーになるので気をつけること
     origin: "https://study-realtime-chatapp-client.vercel.app",
-      // or with an array of origins
-      // origin: ["https://my-frontend.com", "https://my-other-frontend.com", "http://localhost:3000"],
     credentials: true
   },
   // サーバー側とクライアント側の両方で、第2引数にpathを同値で設定する必要がある。
-  path: "/socket/"
+  path: "/socket.io/"
 });
 
 app.get("/", (req, res) => {
